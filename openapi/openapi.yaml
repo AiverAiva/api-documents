@@ -41,8 +41,8 @@ info:
 tags:
   - name: Basic
     description: Basic checks to the api.
-  - name: osu
-    description: osu! related endpoints.
+  - name: osu!
+    description: osu! related.
   # - name: Tag
   #   description: This is a tag description.
 servers:
@@ -53,10 +53,12 @@ servers:
   #       description: Your tenant id
   - url: https://api.weikuwu.me/
 paths:
-  # /users/{username}:
-  #   $ref: paths/users_{username}.yaml
+  /osu/profileCard/{username}:
+    $ref: paths/osu/profileCard_{username}.yaml
   /hello:
     $ref: paths/hello.yaml
+  # /users/{username}:
+  #   $ref: paths/users_{username}.yaml
   # /pathItem:
   #   $ref: paths/pathItem.yaml
   # /pathItemWithExamples:

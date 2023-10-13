@@ -1,0 +1,92 @@
+get:
+  tags:
+    - osu!
+  summary: Get player profile card image
+  description: |
+    This endpoint returns an image of the player's profile data for the specified username. 
+    The profile card contains visual representation of player data such as avatar, rank, and statistics.
+  operationId: profileCard
+  parameters:
+    - in: path
+      name: username
+      required: true
+      schema:
+        type: string
+      description: The username of the player for whom the profile card image is requested.
+    - in: query
+      name: mode
+      required: false
+      schema:
+        type: string
+        enum: ["osu", "taiko", "fruits", "mania"]
+      description: '**Optional** mode parameter with possible values "osu", "taiko", "fruits"or "mania".'
+  responses:
+    "200":
+      description: Successful response with player profile card image. 
+      content:
+        image/png:
+          schema:
+            type: string
+            format: binary
+          examples:
+            response:
+              value: "an image"
+    "400":
+      description: Player not found. Indicates that the specified username does not exist.
+      content:
+        application/json:
+          schema:
+            type: string
+            format: binary
+          examples:
+            response:
+              value: {"error": "Unknown username or mode, please check the documents. (api.weikuwu.me)"}
+    # content:
+    #   application/json:
+    #     schema:
+    #       $ref: ../components/schemas/User.yaml
+    #     example:
+    #       username: user1
+    #       email: user@example.com
+    # '403':
+    #   description: Forbidden
+    #   $ref: ../components/responses/Problem.yaml
+    # '404':
+    #   description: User not found
+    #   $ref: ../components/responses/Problem.yaml
+# put:
+#   tags:
+#     - User
+#   summary: Updated user
+#   description: This can only be done by the logged in user.
+#   operationId: updateUser
+#   parameters:
+#     - name: username
+#       in: path
+#       description: The name that needs to be updated
+#       required: true
+#       schema:
+#         type: string
+# security:
+#   - main_auth:
+#       - write:users
+# requestBody:
+#   content:
+#     application/json:
+#       schema:
+#         $ref: ../components/schemas/User.yaml
+#     application/xml:
+#       schema:
+#         $ref: ../components/schemas/User.yaml
+#   description: Updated user object
+#   required: true
+# responses:
+#   '200':
+#     description: OK
+# '400':
+#   description: Invalid user supplied
+#   $ref: ../components/responses/Problem.yaml
+# '404':
+#   description: User not found
+#   $ref: ../components/responses/Problem.yaml
+
