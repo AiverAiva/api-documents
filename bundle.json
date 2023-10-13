@@ -18,11 +18,83 @@
       "description": "Basic checks to the api."
     },
     {
-      "name": "osu",
-      "description": "osu! related endpoints."
+      "name": "osu!",
+      "description": "osu! related."
     }
   ],
   "paths": {
+    "/osu/profileCard/{username}": {
+      "get": {
+        "tags": [
+          "osu!"
+        ],
+        "summary": "Get player profile card image",
+        "description": "This endpoint returns an image of the player's profile data for the specified username. \nThe profile card contains visual representation of player data such as avatar, rank, and statistics.\n",
+        "operationId": "profileCard",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "username",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "The username of the player for whom the profile card image is requested."
+          },
+          {
+            "in": "query",
+            "name": "mode",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "osu",
+                "taiko",
+                "fruits",
+                "mania"
+              ]
+            },
+            "description": "**Optional** mode parameter with possible values \"osu\", \"taiko\", \"fruits\"or \"mania\"."
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response with player profile card image.",
+            "content": {
+              "image/png": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                },
+                "examples": {
+                  "response": {
+                    "value": "an image"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Player not found. Indicates that the specified username does not exist.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                },
+                "examples": {
+                  "response": {
+                    "value": {
+                      "error": "Unknown username or mode, please check the documents. (api.weikuwu.me)"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/hello": {
       "post": {
         "tags": [
