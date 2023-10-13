@@ -26,7 +26,6 @@ jobs:
 
     - name: Duplicate index.html
       run: |
-        mkdir dist
         cp ./docs/index.html ./dist
 
     - name: Deploy
