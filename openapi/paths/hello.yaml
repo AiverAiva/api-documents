@@ -9,7 +9,7 @@ post:
   #   - basic_auth: []
   responses:
     '200':
-      description: OK
+      description: Hello World!
       # headers:
       #   X-Rate-Limit:
       #     description: calls per hour allowed by the user
