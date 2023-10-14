@@ -96,7 +96,7 @@
       }
     },
     "/hello": {
-      "post": {
+      "get": {
         "tags": [
           "Basic"
         ],
