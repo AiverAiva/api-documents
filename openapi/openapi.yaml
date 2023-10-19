@@ -63,6 +63,8 @@ paths:
   #   $ref: paths/wynncraft/challengeList.yaml    
   /wynncraft/guildPrefix:
     $ref: paths/wynncraft/guildPrefix.yaml   
+  /wynncraft/guildName:
+    $ref: paths/wynncraft/guildName.yaml   
   # /users/{username}:
   #   $ref: paths/users_{username}.yaml
   # /pathItem:
