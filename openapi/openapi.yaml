@@ -43,6 +43,8 @@ tags:
     description: Basic checks to the api.
   - name: osu!
     description: osu! related.
+  - name: Wynncraft
+    description: Wynncraft related.
   # - name: Tag
   #   description: This is a tag description.
 servers:
@@ -53,10 +55,14 @@ servers:
   #       description: Your tenant id
   - url: https://api.weikuwu.me/
 paths:
-  /osu/profileCard/{username}:
-    $ref: paths/osu/profileCard_{username}.yaml
   /hello:
     $ref: paths/hello.yaml
+  /osu/profileCard/{username}:
+    $ref: paths/osu/profileCard_{username}.yaml
+  # /wynncraft/challengeList:
+  #   $ref: paths/wynncraft/challengeList.yaml    
+  /wynncraft/guildPrefix:
+    $ref: paths/wynncraft/guildPrefix.yaml   
   # /users/{username}:
   #   $ref: paths/users_{username}.yaml
   # /pathItem:
