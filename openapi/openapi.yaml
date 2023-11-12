@@ -59,8 +59,8 @@ paths:
     $ref: paths/hello.yaml
   /osu/profileCard/{username}:
     $ref: paths/osu/profileCard_{username}.yaml
-  # /wynncraft/challengeList:
-  #   $ref: paths/wynncraft/challengeList.yaml    
+  /wynncraft/challengeList:
+    $ref: paths/wynncraft/challengeList.yaml    
   /wynncraft/guildPrefix:
     $ref: paths/wynncraft/guildPrefix.yaml   
   /wynncraft/guildName:
