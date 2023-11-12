@@ -3,7 +3,7 @@
 ```yaml
 type: object
 properties:
-  id:
+  id: 
     description: The customer identifier string
     readOnly: true
     allOf:
