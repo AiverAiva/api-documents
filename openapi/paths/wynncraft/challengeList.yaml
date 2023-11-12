@@ -11,7 +11,7 @@ get:
       required: false
       schema:
         type: boolean
-      description: "**Optional** if you want to seperate the list into dungeons and raids, please specific this to true *Default: false*"
+      description: "**Optional** if you want to seperate the list into dungeons and raids, specify this to true. \n*Default: false*"
   responses:
     "200":
       description: Successful response with player profile card image.
