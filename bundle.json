@@ -126,6 +126,100 @@
         }
       }
     },
+    "/wynncraft/challengeList": {
+      "get": {
+        "tags": [
+          "Wynncraft"
+        ],
+        "summary": "Get the available dungeons and raids list.",
+        "description": "yes\n",
+        "operationId": "challengeList",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "detailed",
+            "required": false,
+            "schema": {
+              "type": "boolean"
+            },
+            "description": "**Optional** if you want to seperated dungeons and raids into two parts, please specific this to true"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response with player profile card image.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                },
+                "examples": {
+                  "detailed_true": {
+                    "summary": "Response when detailed is true",
+                    "value": {
+                      "dungeons": [
+                        "Decrepit Sewers",
+                        "Infested Pit",
+                        "Lost Sanctuary",
+                        "Underworld Crypt",
+                        "Sand-Swept Tomb",
+                        "Ice Barrows",
+                        "Undergrowth Ruins",
+                        "Galleon's Graveyard",
+                        "Fallen Factory",
+                        "Eldritch Outlook",
+                        "Corrupted Decrepit Sewers",
+                        "Corrupted Infested Pit",
+                        "Corrupted Lost Sanctuary",
+                        "Corrupted Underworld Crypt",
+                        "Corrupted Sand-Swept Tomb",
+                        "Corrupted Ice Barrows",
+                        "Corrupted Undergrowth Ruins",
+                        "Corrupted Galleon's Graveyard"
+                      ],
+                      "raids": [
+                        "Nest of the Grootslangs",
+                        "Orphion's Nexus of Light",
+                        "The Canyon Colossus",
+                        "The Nameless Anomaly"
+                      ]
+                    }
+                  },
+                  "defailed_false": {
+                    "summary": "Response when detailed is false",
+                    "value": [
+                      "Decrepit Sewers",
+                      "Infested Pit",
+                      "Lost Sanctuary",
+                      "Underworld Crypt",
+                      "Sand-Swept Tomb",
+                      "Ice Barrows",
+                      "Undergrowth Ruins",
+                      "Galleon's Graveyard",
+                      "Fallen Factory",
+                      "Eldritch Outlook",
+                      "Corrupted Decrepit Sewers",
+                      "Corrupted Infested Pit",
+                      "Corrupted Lost Sanctuary",
+                      "Corrupted Underworld Crypt",
+                      "Corrupted Sand-Swept Tomb",
+                      "Corrupted Ice Barrows",
+                      "Corrupted Undergrowth Ruins",
+                      "Corrupted Galleon's Graveyard",
+                      "Nest of the Grootslangs",
+                      "Orphion's Nexus of Light",
+                      "The Canyon Colossus",
+                      "The Nameless Anomaly"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/wynncraft/guildPrefix": {
       "get": {
         "tags": [
