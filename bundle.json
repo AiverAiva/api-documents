@@ -142,7 +142,7 @@
             "schema": {
               "type": "boolean"
             },
-            "description": "**Optional** if you want to seperated dungeons and raids into two parts, please specific this to true *Default: false*"
+            "description": "**Optional** if you want to seperate the list into dungeons and raids, please specific this to true *Default: false*"
           }
         ],
         "responses": {
