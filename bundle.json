@@ -142,7 +142,7 @@
             "schema": {
               "type": "boolean"
             },
-            "description": "**Optional** if you want to seperated dungeons and raids into two parts, please specific this to true"
+            "description": "**Optional** if you want to seperated dungeons and raids into two parts, please specific this to true *Default: false*"
           }
         ],
         "responses": {
@@ -155,6 +155,33 @@
                   "format": "binary"
                 },
                 "examples": {
+                  "defailed_false": {
+                    "summary": "Response when detailed is false",
+                    "value": [
+                      "Decrepit Sewers",
+                      "Infested Pit",
+                      "Lost Sanctuary",
+                      "Underworld Crypt",
+                      "Sand-Swept Tomb",
+                      "Ice Barrows",
+                      "Undergrowth Ruins",
+                      "Galleon's Graveyard",
+                      "Fallen Factory",
+                      "Eldritch Outlook",
+                      "Corrupted Decrepit Sewers",
+                      "Corrupted Infested Pit",
+                      "Corrupted Lost Sanctuary",
+                      "Corrupted Underworld Crypt",
+                      "Corrupted Sand-Swept Tomb",
+                      "Corrupted Ice Barrows",
+                      "Corrupted Undergrowth Ruins",
+                      "Corrupted Galleon's Graveyard",
+                      "Nest of the Grootslangs",
+                      "Orphion's Nexus of Light",
+                      "The Canyon Colossus",
+                      "The Nameless Anomaly"
+                    ]
+                  },
                   "detailed_true": {
                     "summary": "Response when detailed is true",
                     "value": {
@@ -185,33 +212,6 @@
                         "The Nameless Anomaly"
                       ]
                     }
-                  },
-                  "defailed_false": {
-                    "summary": "Response when detailed is false",
-                    "value": [
-                      "Decrepit Sewers",
-                      "Infested Pit",
-                      "Lost Sanctuary",
-                      "Underworld Crypt",
-                      "Sand-Swept Tomb",
-                      "Ice Barrows",
-                      "Undergrowth Ruins",
-                      "Galleon's Graveyard",
-                      "Fallen Factory",
-                      "Eldritch Outlook",
-                      "Corrupted Decrepit Sewers",
-                      "Corrupted Infested Pit",
-                      "Corrupted Lost Sanctuary",
-                      "Corrupted Underworld Crypt",
-                      "Corrupted Sand-Swept Tomb",
-                      "Corrupted Ice Barrows",
-                      "Corrupted Undergrowth Ruins",
-                      "Corrupted Galleon's Graveyard",
-                      "Nest of the Grootslangs",
-                      "Orphion's Nexus of Light",
-                      "The Canyon Colossus",
-                      "The Nameless Anomaly"
-                    ]
                   }
                 }
               }
